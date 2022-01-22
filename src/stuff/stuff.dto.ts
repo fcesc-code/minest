@@ -8,3 +8,17 @@ export class AddStuffDTO {
     readonly category: string;
   };
 }
+
+export class CreateStuffDTO {
+  @ApiProperty()
+  readonly name: string;
+  @ApiProperty()
+  readonly description: string;
+  @ApiProperty()
+  readonly category: string;
+}
+
+export class StuffDTO extends CreateStuffDTO {
+  @ApiProperty()
+  id: string;
+}

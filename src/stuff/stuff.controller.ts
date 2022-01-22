@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post, Query } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, Query } from '@nestjs/common';
 import { StuffService } from './stuff.service';
 import { AddStuffDTO } from './stuff.dto';
 
@@ -11,8 +11,18 @@ export class StuffController {
     return this.stuffService.getStuff(query);
   }
 
+  @Get('')
+  async getAllStuff(): Promise<string> {
+    return await this.stuffService.getAllStuff();
+  }
+
+  @Get('id/:id')
+  async getStuffById(@Param('id') id: string): Promise<string> {
+    return await this.stuffService.getStuffById(id);
+  }
+
   @Post(`add`)
-  addStuff(@Body() body: AddStuffDTO): string {
-    return this.stuffService.addStuff(body);
+  async addStuff(@Body() body: AddStuffDTO): Promise<string> {
+    return await this.stuffService.addStuff(body);
   }
 }

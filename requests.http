@@ -5,8 +5,8 @@ Content-Type: application/json
 
 {
   "content": {
-    "name": "Big Mountain",
-    "description": "Somewhere in another world",
-    "category": "exoplanets"
+    "name": "Robot",
+    "description": "There is a loose killer Robot out there",
+    "category": "terminator"
   }
 }
