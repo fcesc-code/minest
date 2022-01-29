@@ -1,1 +1,26 @@
-[{"id":"1","name":"Картофель","description":"Yes, some weird stuff.","category":"food"},{"id":"d6eef692-7ad2-47e7-aca9-49798d89ca08","name":"Smaller Venus","description":"Somewhere in another galaxy.","category":"exoplanets"},{"name":"Big Mountain","description":"Somewhere in another world","category":"exoplanets","id":"06e2f692-7bd2-47e7-aca9-49798d89ca09"},{"name":"Robot","description":"There is a loose killer Robot out there","category":"terminator","id":"67d00ebd-094f-479d-8710-8a3ef8aa6c8d"}]
+[
+  {
+    "id": "1",
+    "name": "Картофель",
+    "description": "Yes, some weird stuff.",
+    "category": "food"
+  },
+  {
+    "name": "Big Mountain",
+    "description": "Somewhere in another world",
+    "category": "exoplanets",
+    "id": "06e2f692-7bd2-47e7-aca9-49798d89ca09"
+  },
+  {
+    "name": "Robot",
+    "description": "There is a loose killer Robot out there",
+    "category": "terminator",
+    "id": "67d00ebd-094f-479d-8710-8a3ef8aa6c8d"
+  },
+  {
+    "name": "Smaller Venus",
+    "description": "Somewhere in another galaxy.",
+    "category": "habitable explanet",
+    "id": "51958c01-04a5-4245-8951-a43f5135e48d"
+  }
+]

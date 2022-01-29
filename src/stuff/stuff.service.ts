@@ -1,17 +1,23 @@
 import { Injectable } from '@nestjs/common';
-import { AddStuffDTO } from './stuff.dto';
+import {
+  AddStuffDTO,
+  DeleteStuffDTO,
+  StuffDTO,
+  UpdateStuffDTO,
+} from './stuff.dto';
 import { StuffRepository } from './stuff.repository';
 @Injectable()
 export class StuffService {
   constructor(private stuffRepository: StuffRepository) {}
 
-  async getStuffById(id: string): Promise<string> {
+  async getStuffById(id: string): Promise<StuffDTO> {
     const foundStuff = await this.stuffRepository.findOne(id);
-    let response = '';
-    for (const property in foundStuff) {
-      response += ` ${property}: ${foundStuff[property]},`;
-    }
-    return response;
+    // let response = '';
+    // for (const property in foundStuff) {
+    //   response += ` ${property}: ${foundStuff[property]},`;
+    // }
+    // return response;
+    return foundStuff;
   }
 
   async getAllStuff(): Promise<string> {
@@ -38,7 +44,18 @@ export class StuffService {
   }
 
   async addStuff(body: AddStuffDTO): Promise<string> {
-    await this.stuffRepository.create(body.content);
-    return `Added new stuff`;
+    const id = await this.stuffRepository.create(body.content);
+    return `Added new stuff with id: ${id}`;
+  }
+
+  async updateStuff(body: UpdateStuffDTO): Promise<string> {
+    await this.stuffRepository.update(body.content);
+    return `Updated stuff with id: ${body.content.id}`;
+  }
+
+  async deleteStuff(body: DeleteStuffDTO): Promise<string> {
+    const id = body.content.id;
+    await this.stuffRepository.delete(id);
+    return `Deleted stuff with id: ${id}`;
   }
 }

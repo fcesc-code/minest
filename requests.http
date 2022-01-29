@@ -1,12 +1,37 @@
 ### Post stuff
 
-POST http://localhost:3000/stuff/add
+POST http://localhost:3000/stuff/
 Content-Type: application/json
 
 {
   "content": {
-    "name": "Robot",
-    "description": "There is a loose killer Robot out there",
-    "category": "terminator"
+    "name": "Smaller Venus",
+    "description": "Somewhere in another galaxy.",
+    "category": "habitable explanet"
+  }
+}
+
+### Delete stuff ( uuid needs to be updated )
+
+DELETE http://localhost:3000/stuff/
+Content-Type: application/json
+
+{
+  "content": {
+    "id": "d6eef692-7ad2-47e7-aca9-49798d89ca08"
+  }
+}
+
+### Update stuff
+
+PUT http://localhost:3000/stuff/
+Content-Type: application/json
+
+{
+  "content": {
+    "name": "Smaller Venus",
+    "description": "Somewhere in another galaxy.",
+    "category": "habitable exoplanet",
+    "id": "51958c01-04a5-4245-8951-a43f5135e48d"
   }
 }
