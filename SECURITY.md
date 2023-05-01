@@ -15,4 +15,4 @@ _\* A decision on support has not yet been made._
 Since this is an open-source project for educational purposes, no support is granted. However, we are
 glad to hear feedback from any vulnerabilities or bugs in order to sharpen my coding skills.
 
-To report any vulnerability or bug :rotating_light:, just open an [issue](https://github.com/fcesc-code/nestback/issues) or a pull request.
+To report any vulnerability or bug :rotating_light:, just open an [issue](https://github.com/fcesc-code/minest/issues) or a pull request.
